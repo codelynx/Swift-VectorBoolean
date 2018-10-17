@@ -11,7 +11,7 @@ import XCTest
 
 extension CGPath {
 
-    func forEach( body: @convention(block) (CGPathElement) -> Void) {
+    func forEach( body: @escaping @convention(block) (CGPathElement) -> Void) {
         typealias Body = @convention(block) (CGPathElement) -> Void
         let callback: @convention(c) (UnsafeMutableRawPointer, UnsafePointer<CGPathElement>) -> Void = { (info, element) in
             let body = unsafeBitCast(info, to: Body.self)
@@ -100,17 +100,4 @@ class Swift_VectorBooleanTests: XCTestCase {
             }
         }
     }
-    
-    func testExample() {
-        // This is an example of a functional test case.
-        XCTAssert(true, "Pass")
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure() {
-            // Put the code you want to measure the time of here.
-        }
-    }
-    
 }
