@@ -63,6 +63,7 @@ class TestShapeData {
     return shapes.count
   }
   let shapes : [TestShape] = [
+    Wolf(),
     TestShape_Circle_Overlapping_Rectangle(),     // 1
     TestShape_Circle_in_Rectangle(),              // 2
     TestShape_Rectangle_in_Circle(),              // 3
@@ -951,6 +952,56 @@ class TestShape_Tiny_Rectangle_Overlapping_Rectangle : TestShape, SampleShapeMak
   func topShape() -> UIBezierPath {
     return UIBezierPath(rect: CGRect(x: 48, y: 48, width: 25, height: 25))
   }
+}
+
+class Wolf : TestShape, SampleShapeMaker {
+
+    init() {
+        super.init(label: "Wolf")
+    }
+
+    func moveTo(_ path: UIBezierPath, _ x: CGFloat, _ y: CGFloat) {
+        path.move(to: CGPoint(x: x, y: y))
+    }
+
+    func lineTo(_ path: UIBezierPath, _ x: CGFloat, _ y: CGFloat) {
+        path.addLine(to: CGPoint(x: x, y: y))
+    }
+
+    func closePath(_ path: UIBezierPath) {
+        path.close()
+    }
+
+    func otherShapes() -> UIBezierPath {
+        let path = UIBezierPath()
+
+//        moveTo(path,230.979,545.5)
+//        lineTo(path,520.493,719.234)
+//        lineTo(path,523.066,714.946)
+//        lineTo(path,233.552,541.212)
+//        lineTo(path,230.979,545.5)
+//        closePath(path)
+        moveTo(path,233.552,541.212)
+        lineTo(path,230.979,545.5)
+        lineTo(path,520.493,719.234)
+        lineTo(path,523.066,714.946)
+        lineTo(path,233.552,541.212)
+        closePath(path)
+
+        return path
+    }
+
+    func topShape() -> UIBezierPath {
+        let path = UIBezierPath()
+
+        moveTo(path,236.383,524.834)
+        lineTo(path,267.251,543.358)
+        lineTo(path,248.727,574.227)
+        lineTo(path,217.859,555.703)
+        closePath(path)
+
+        return path
+    }
 }
 
 // MARK: Extra functions
