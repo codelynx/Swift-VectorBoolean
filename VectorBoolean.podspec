@@ -9,10 +9,10 @@ Pod::Spec.new do |s|
   s.license          = "MIT"
   s.author           = { "lrtitze" => "" }
   s.platform         = :ios
-  s.source           = { :git => "https://github.com/lrtitze/Swift-VectorBoolean.git", :tag => "v#{s.version}" }
+  s.source           = { :git => "https://github.com/huymd/Swift-VectorBoolean.git", :tag => "v#{s.version}" }
   s.source_files     = "Swift VectorBoolean/VectorBoolean/**/*.{swift}"
   s.requires_arc     = true
   s.ios.deployment_target = '9.0'
-  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '3.2' }
+  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '5' }
 
 end
