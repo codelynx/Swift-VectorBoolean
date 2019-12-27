@@ -1,7 +1,7 @@
 Swift VectorBoolean for iOS
 ===========================
 
-### ✻ Updated for Xcode 9 and Swift 3.2
+### ✻ Updated for Xcode 11 and Swift 5
 
 ### Notes
  - Now contains a *framework* target thanks to [Lin Wang](https://github.com/an0).
