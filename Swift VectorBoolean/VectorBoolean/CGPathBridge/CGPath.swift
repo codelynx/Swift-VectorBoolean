@@ -50,6 +50,8 @@ public extension CGPath {
                 
             case .closeSubpath:
                 fn(.close)
+            default:
+                break
             }
         }
     }

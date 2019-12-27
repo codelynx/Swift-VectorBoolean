@@ -12,26 +12,26 @@
 import UIKit
 
 class FBCurveLocation {
-
-  var graph : FBBezierGraph?
-  var contour : FBBezierContour?
-  fileprivate var _edge : FBBezierCurve
-  fileprivate var _parameter : Double
-  fileprivate var _distance : Double
-
-  init(edge: FBBezierCurve, parameter: Double, distance: Double) {
-    _edge = edge
-    _parameter = parameter
-    _distance = distance
-  }
-
-  var edge : FBBezierCurve {
-    return _edge
-  }
-  var parameter : Double {
-    return _parameter
-  }
-  var distance : Double {
-    return _distance
-  }
+    
+    var graph : FBBezierGraph?
+    var contour : FBBezierContour?
+    fileprivate var _edge : FBBezierCurve
+    fileprivate var _parameter : Double
+    fileprivate var _distance : Double
+    
+    init(edge: FBBezierCurve, parameter: Double, distance: Double) {
+        _edge = edge
+        _parameter = parameter
+        _distance = distance
+    }
+    
+    var edge : FBBezierCurve {
+        return _edge
+    }
+    var parameter : Double {
+        return _parameter
+    }
+    var distance : Double {
+        return _distance
+    }
 }
